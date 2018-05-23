@@ -79,7 +79,7 @@ bundle exec rackup -s Puma -p 3017 -o 0.0.0.0 &> /dev/null &
 #          ps grep $elem ...
 sleep 2
 echo "All apps running"
-echo -e "- Rails:\n$(ps -u $USER | grep ttys | grep -e rails -e puma -e rackup | grep -v grep | cut -f 5,13- -d ' ')"
+echo -e "- Rails:\n$(ps -u $USER | grep ttys | grep -e rails -e puma -e rackup | grep -v grep  | tr -s " " | cut -d " " -f 3,7-)"
 echo -e "- Redis:\n$(ps -u $USER | grep redis | grep -v grep| cut -f 5,12- -d ' ')"
 echo -e "- MySQL:\n$(mysql.server status)"
 
