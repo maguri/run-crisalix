@@ -1,21 +1,21 @@
 # run-crisalix
-
-Some scripts that make you the life easier working at Crisalix.
+Some scripts that make you the life easier working at [Crisalix](https://www.crisalix.com).
 
 ## Getting Started
+Assuming that you work at Crisalix, and you have all the corresponding dependencies to run theire apps in local.
 
-### Prerequisites
-
-If you can run the Crisalix apps by hand one by one you can use this scripting tool.
-
-### Installing
-
+- Download de repo.
 ```
 $ git clone https://github.com/maguri/run-crisalix.git
 ```
 
-Configure the corresponding alias into your `~/.bashrc` file.
+- Create the file `repo_path.txt` into run-crisalix repo and write the path to your working directory where you should have all the Crisalix repos.
+```
+$ cd run-crisalix
+$ echo "/Users/user/path/to/crisalix/repos/" >> repo_path.txt
+```
 
+- Configure the corresponding alias into your `~/.bashrc` file.
 ```
 # Crisalix
 alias crun="/Users/mauri/Scripts/run_crisalix.sh"         # run
@@ -24,7 +24,6 @@ alias cstop="/Users/mauri/Scripts/stop_crisalix.sh"       # stop
 ```
 
 ### Run & Stop Apps
-
 - `crun` => run all apps.
 - `cstop` => stop all apps.
 - `cstatus` => see info of each app.
@@ -47,11 +46,7 @@ $ kill -9 <pid>
 $ bundle exec rails server -p <port>
 ```
 
-## TODO
-
-- [ ] Arguments and options for each script.
-- [ ] Help Option
-
 ## License
+This project is licensed under the MIT License. 
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+Feel free to contribute! - [TODO](https://github.com/maguri/run-crisalix/issues/1) LIST.
