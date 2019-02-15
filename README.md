@@ -17,11 +17,6 @@ $ git clone https://github.com/maguri/run-crisalix.git
 Configure the corresponding alias into your `~/.bashrc` file.
 
 ```
-# mysql.server start
-alias mystart="mysql.server start"
-alias mystatus="mysql.server status"
-alias mystop="mysql.server stop"
-
 # Crisalix
 alias crun="/Users/mauri/Scripts/run_crisalix.sh"         # run
 alias cstatus="/Users/mauri/Scripts/status_crisalix.sh"   # status
@@ -34,14 +29,28 @@ alias cstop="/Users/mauri/Scripts/stop_crisalix.sh"       # stop
 - `cstop` => stop all apps.
 - `cstatus` => see info of each app.
 
-- `kill -9 #pid` => stop the app you want.
-- `bundle exec rails server -p #port` => run the app you want to see the log (in the corresponding directory).
+**To see the server log of one app**
+```
+$ cstatus
+
+  Apps and DBs statuses
+  - Rails:
+    <pid> bin/rails s -p <port>
+    ...
+
+   - Redis:
+     #pid 127.0.0.1:6379
+   - MySQL:
+     SUCCESS! MySQL running (674)
+
+$ kill -9 <pid>
+$ bundle exec rails server -p <port>
+```
 
 ## TODO
 
-
-- [ ] Restart Option [restart_crisalix.sh](restart_crisalix.sh).
 - [ ] Arguments and options for each script.
+- [ ] Help Option
 
 ## License
 

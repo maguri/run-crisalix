@@ -11,13 +11,12 @@ function print_message() {
   echo -e "App's number references:\n"
   echo -e "\t0. Stop ${bold}Admin CRM${normal} in port \t${bold}3000${normal}\n"
   echo -e "\t1. Stop ${bold}Estetix${normal} in port \t${bold}3001${normal}\n"
-  echo -e "\t2. Stop ${bold}Implants${normal} in port \t${bold}3004${normal}\n"
   echo -e "\t3. Stop ${bold}Crisalix${normal} in port \t${bold}3005${normal}\n"
   echo -e "\t4. Stop ${bold}SSO${normal} in port \t\t${bold}3007${normal}\n"
   echo -e "\t5. Stop ${bold}My${normal} in port \t\t${bold}3008${normal}\n"
   echo -e "\t6. Stop ${bold}Stats${normal} in port \t\t${bold}3021${normal}\n"
-  echo -e "\ne.g. cstop 0 1 4\n"
-  echo -e "\nThis will stop apps Admin, Estetix and SSO"
+  echo -e "\ne.g. cstop -a crisalix_admin\n"
+  echo -e "\nThis will stop apps Admin"
 }
 
 # if [[ $1 -eq 0 ]]
